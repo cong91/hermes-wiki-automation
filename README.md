@@ -5,9 +5,9 @@ Shared Hermes automation project for filing durable conversation outputs into an
 ## What this project contains
 
 - `plugins/durable_answer_on_session_end/` — Hermes `on_session_end` plugin that extracts conservative durable-answer candidates.
-- `scripts/wiki-file-durable-answer-v1.py` — single-payload filing runner.
-- `scripts/wiki-file-durable-answer-queue-v1.py` — queue sweeper that files one or more pending payloads.
-- `scripts/wiki-prepare-durable-answer-payload-v1.py` — helper for preparing a payload from a selected Hermes session exchange.
+- `scripts/wiki_file_durable_answer.py` — single-payload filing runner.
+- `scripts/wiki_file_durable_answer_queue.py` — queue sweeper that files one or more pending payloads.
+- `scripts/wiki_prepare_durable_answer_payload.py` — helper for preparing a payload from a selected Hermes session exchange.
 - `tests/` — focused regression tests for the plugin and runners.
 
 ## Architecture

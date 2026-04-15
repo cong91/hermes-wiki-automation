@@ -10,12 +10,12 @@ import pytest
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-SCRIPT_PATH = REPO_ROOT / 'scripts' / 'wiki-file-durable-answer-v1.py'
+SCRIPT_PATH = REPO_ROOT / 'scripts' / 'wiki_file_durable_answer.py'
 
 
 def load_module():
     assert SCRIPT_PATH.exists(), f'Missing script: {SCRIPT_PATH}'
-    spec = importlib.util.spec_from_file_location('wiki_file_durable_answer_v1', SCRIPT_PATH)
+    spec = importlib.util.spec_from_file_location('wiki_file_durable_answer', SCRIPT_PATH)
     module = importlib.util.module_from_spec(spec)
     assert spec.loader is not None
     sys.modules[spec.name] = module

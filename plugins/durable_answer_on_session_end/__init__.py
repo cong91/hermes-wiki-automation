@@ -158,10 +158,10 @@ def queue_payload(queue_root: Path, payload: dict, unique_key: str) -> Path:
 def resolve_queue_runner_script_path() -> Path:
     current = Path(__file__).resolve()
     candidates = [
-        hermes_home() / 'scripts' / 'wiki-file-durable-answer-queue-v1.py',
-        current.parents[2] / 'scripts' / 'wiki-file-durable-answer-queue-v1.py',
-        Path(__file__).resolve().parents[2] / 'scripts' / 'wiki-file-durable-answer-queue-v1.py',
-        Path('/root/.hermes/scripts/wiki-file-durable-answer-queue-v1.py'),
+        hermes_home() / 'scripts' / 'wiki_file_durable_answer_queue.py',
+        current.parents[2] / 'scripts' / 'wiki_file_durable_answer_queue.py',
+        Path(__file__).resolve().parents[2] / 'scripts' / 'wiki_file_durable_answer_queue.py',
+        Path('/root/.hermes/scripts/wiki_file_durable_answer_queue.py'),
     ]
     for candidate in candidates:
         if candidate.exists():
@@ -174,7 +174,7 @@ def resolve_queue_runner_script_path() -> Path:
 
 def load_queue_runner_module():
     script_path = resolve_queue_runner_script_path()
-    spec = importlib.util.spec_from_file_location('wiki_file_durable_answer_queue_v1_runtime', script_path)
+    spec = importlib.util.spec_from_file_location('wiki_file_durable_answer_queue_runtime', script_path)
     if spec is None or spec.loader is None:
         raise RuntimeError(f'Unable to load durable-answer queue runner from {script_path}')
     module = importlib.util.module_from_spec(spec)

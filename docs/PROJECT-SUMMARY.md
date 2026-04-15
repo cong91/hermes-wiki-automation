@@ -8,10 +8,10 @@ Package the proven Hermes durable-answer automation into a reusable standalone p
 
 ## Included components
 - Shared Hermes plugin: `plugins/durable_answer_on_session_end/`
-- Filing runner: `scripts/wiki-file-durable-answer-v1.py`
-- Queue runner: `scripts/wiki-file-durable-answer-queue-v1.py`
-- Queue wrapper: `scripts/wiki-file-durable-answer-queue-v1-direct.sh`
-- Payload preparation helper: `scripts/wiki-prepare-durable-answer-payload-v1.py`
+- Filing runner: `scripts/wiki_file_durable_answer.py`
+- Queue runner: `scripts/wiki_file_durable_answer_queue.py`
+- Queue wrapper: `scripts/wiki_file_durable_answer_queue_direct.sh`
+- Payload preparation helper: `scripts/wiki_prepare_durable_answer_payload.py`
 - Focused tests: `tests/`
 - Local installer: `bin/install-local.sh`
 - Docs: `README.md`, `docs/ARCHITECTURE.md`

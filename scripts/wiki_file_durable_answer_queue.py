@@ -25,8 +25,8 @@ def parse_args() -> argparse.Namespace:
 
 
 def load_runner_module():
-    script_path = Path(__file__).resolve().parent / 'wiki-file-durable-answer-v1.py'
-    spec = importlib.util.spec_from_file_location('wiki_file_durable_answer_v1_runtime', script_path)
+    script_path = Path(__file__).resolve().parent / 'wiki_file_durable_answer.py'
+    spec = importlib.util.spec_from_file_location('wiki_file_durable_answer_runtime', script_path)
     if spec is None or spec.loader is None:
         raise SystemExit(f'Unable to load durable-answer runner from {script_path}')
     module = importlib.util.module_from_spec(spec)

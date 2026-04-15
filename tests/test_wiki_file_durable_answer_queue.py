@@ -9,13 +9,13 @@ import yaml
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-QUEUE_SCRIPT_PATH = REPO_ROOT / 'scripts' / 'wiki-file-durable-answer-queue-v1.py'
-RUNNER_SCRIPT_PATH = REPO_ROOT / 'scripts' / 'wiki-file-durable-answer-v1.py'
+QUEUE_SCRIPT_PATH = REPO_ROOT / 'scripts' / 'wiki_file_durable_answer_queue.py'
+RUNNER_SCRIPT_PATH = REPO_ROOT / 'scripts' / 'wiki_file_durable_answer.py'
 
 
 def load_module():
     assert QUEUE_SCRIPT_PATH.exists(), f'Missing script: {QUEUE_SCRIPT_PATH}'
-    spec = importlib.util.spec_from_file_location('wiki_file_durable_answer_queue_v1', QUEUE_SCRIPT_PATH)
+    spec = importlib.util.spec_from_file_location('wiki_file_durable_answer_queue', QUEUE_SCRIPT_PATH)
     module = importlib.util.module_from_spec(spec)
     assert spec.loader is not None
     sys.modules[spec.name] = module

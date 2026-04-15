@@ -189,7 +189,7 @@ def test_resolve_queue_runner_script_path_falls_back_when_hermes_home_has_no_scr
 
     script_path = module.resolve_queue_runner_script_path()
 
-    assert script_path == REPO_ROOT / 'scripts' / 'wiki-file-durable-answer-queue-v1.py'
+    assert script_path == REPO_ROOT / 'scripts' / 'wiki_file_durable_answer_queue.py'
 
 
 def test_resolve_wiki_root_falls_back_to_root_config_when_profile_config_missing(tmp_path: Path) -> None:

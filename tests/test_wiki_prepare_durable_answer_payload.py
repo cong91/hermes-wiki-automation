@@ -10,12 +10,12 @@ import os
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-SCRIPT_PATH = REPO_ROOT / 'scripts' / 'wiki-prepare-durable-answer-payload-v1.py'
+SCRIPT_PATH = REPO_ROOT / 'scripts' / 'wiki_prepare_durable_answer_payload.py'
 
 
 def load_module():
     assert SCRIPT_PATH.exists(), f'Missing script: {SCRIPT_PATH}'
-    spec = importlib.util.spec_from_file_location('wiki_prepare_durable_answer_payload_v1', SCRIPT_PATH)
+    spec = importlib.util.spec_from_file_location('wiki_prepare_durable_answer_payload', SCRIPT_PATH)
     module = importlib.util.module_from_spec(spec)
     assert spec.loader is not None
     sys.modules[spec.name] = module
