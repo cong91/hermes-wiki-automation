@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hermes-wiki-automation"
+version = "0.1.0"
+description = "Shared Hermes plugin and runners for conversation-to-wiki durable-answer automation"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["pyyaml>=6.0.2,<7", "pytest>=9.0.0,<10"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

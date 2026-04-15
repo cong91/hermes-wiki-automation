@@ -1,0 +1,6 @@
+name: durable_answer_on_session_end
+version: 0.1.0
+description: "Prototype hook that captures conservative durable-answer candidates on on_session_end."
+author: Hermes Agent
+hooks:
+  - on_session_end
